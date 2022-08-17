@@ -1,1 +1,84 @@
 // Заголовки, общие БЄМ блоки и проче...
+.line-vertcal {
+	// .line-vertcal__inner
+
+	&__inner {
+		position: relative;
+		height: 100vh;
+		span {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 1px;
+			background-color: rgba(255, 255, 255, 0.13);
+			&:nth-child(1) {
+				left: 0;
+			}
+			&:nth-child(2) {
+				left: 200px;
+			}
+			&:nth-child(3) {
+				left: 400px;
+			}
+			&:nth-child(4) {
+				left: 600px;
+			}
+			&:nth-child(5) {
+				left: 800px;
+			}
+			&:nth-child(6) {
+				left: 1000px;
+			}
+			&:nth-child(7) {
+				left: 1200px;
+			}
+		}
+	}
+}
+
+.social {
+	position: absolute;
+	left: -81px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	row-gap: 13px;
+
+	// .social__link
+
+	&__link {
+		display: block;
+		padding: 22px;
+		border-radius: 50px;
+		border: 1px solid #fff;
+	}
+}
+
+.magnetic {
+	transition: transform 0.1s linear;
+}
+
+[class*="__btn"] {
+	font-weight: 700;
+	font-size: rem(13);
+	line-height: math.div(16, 13);
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
+	color: #eaeaea;
+	position: relative;
+	height: fit-content;
+	&::before {
+		content: "";
+		top: -50%;
+		left: -50%;
+		transform: translate(83%, -21%);
+		position: absolute;
+		width: 55px;
+		height: 55px;
+		background: linear-gradient(81.03deg, rgba(94, 11, 200, 0.71) 1.69%, rgba(0, 255, 255, 0.71) 99.21%);
+		z-index: -1;
+		border-radius: 50px;
+	}
+}

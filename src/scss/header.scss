@@ -49,7 +49,18 @@
 }
 
 .header {
-	border-bottom: 1px solid #ffffff;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 80px;
+		width: 100%;
+		left: 0;
+		height: 1px;
+		background-color: #fff;
+	}
 
 	// .header__container
 
@@ -129,6 +140,14 @@
 	// .menu__item
 
 	&__item {
+	}
+
+	// .menu__link
+
+	&__link {
+		font-size: rem(13);
+		font-weight: 700;
+		line-height: math.div(16, 13);
 		padding: 9px 45px 11px 45px;
 		border-radius: 1px;
 		&.active {
@@ -154,13 +173,5 @@
 				}
 			}
 		}
-	}
-
-	// .menu__link
-
-	&__link {
-		font-size: rem(13);
-		font-weight: 700;
-		line-height: math.div(16, 13);
 	}
 }
