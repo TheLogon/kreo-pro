@@ -1,36 +1,45 @@
 <header class="header">
-	<div class="header__container">
-		<div class="header__inner">
-			<a href="/" class="header__logo">Kreo Pro</a>
-			<div class="header__menu menu">
-				<button type="button" class="menu__icon icon-menu"><span></span></button>
-				<nav class="menu__body">
-					<ul class="menu__list">
-						<li class="menu__item"><a href="#" class="menu__link active">Home</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Services</a></li>
-						<li class="menu__item"><a href="#" class="menu__link">Our Team</a></li>
+	<div class="header__inner">
+		<div class="header__menu menu">
+			<button type="button" class="menu__icon icon-menu"><span></span> menu</button>
+			<nav class="menu__body">
+				<ul class="menu__list">
+					<li class="menu__item"><a href="#" class="menu__link">item 1</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__center">
+			<a href="/" class="header__logo"><img src="../img/logo.svg" alt="" /></a>
+			<div class="menu-two">
+				<nav class="menu-two__body">
+					<ul class="menu-two__list">
+						<li class="menu-two__item"><a href="#" class="menu__link">Home</a></li>
+						<li class="menu-two__item">
+							<a href="#" class="menu-two__link">Portfolio <img src="@img/icons/arrow-bottom.svg" alt="" /></a>
+							<ul class="menu-two__sublist">
+								<li class="menu-two__sublist_item">Web-Sites <img src="@img/icons/arrow-btn.svg" alt=""></li>
+								<li class="menu-two__sublist_item"></li>
+								<li class="menu-two__sublist_item"></li>
+								<li class="menu-two__sublist_item"></li>
+							</ul>
+						</li>
+						<li class="menu-two__item"><a href="#" class="menu__link">Services</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
-		<div class="line-vertcal">
-			<div class="line__container">
-				<div class="line-vertcal__inner">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</div>
-		<div class="social">
-			<a href="#" class="social__link magnetic"><img src="@img/icons/telegram.png" alt="" /></a>
-			<a href="#" class="social__link magnetic"><img src="@img/icons/linkedin.png" alt="" /></a>
-			<a href="#" class="social__link magnetic"><img src="@img/icons/whatsapp.png" alt="" /></a>
-		</div>
+		<select name="lang" id="lang" class="custom-select lang" placeholder="EN">
+			<option value="EN">EN</option>
+			<option value="UA">UA</option>
+		</select>
 	</div>
 </header>
+<div class="header-lines">
+	<span class="header-line"></span>
+	<span class="header-line"></span>
+	<span class="header-line"></span>
+	<span class="header-line"></span>
+	<span class="header-line"></span>
+	<span class="header-line"></span>
+	<span class="header-line"></span>
+</div>

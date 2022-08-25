@@ -30,8 +30,12 @@
 		line-height: math.div(74, 75);
 		text-align: center;
 		text-transform: uppercase;
-		color: #00ffff;
-		text-shadow: 5px 5px 0px #032226;
+		background: linear-gradient(80.83deg, #7B16FC 0%, #00FFFF 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+		// text-shadow: 5px 5px 0px #032226;
 		max-width: 701px;
 		margin-top: 75px;
 	}
@@ -48,7 +52,11 @@
 		margin-left: -162px;
 		span {
 			font-weight: 900;
-			color: #ee6d22;
+			background: linear-gradient(81.86deg, #7B16FC 5.98%, #00FFFF 37.22%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
 		}
 	}
 
@@ -70,27 +78,37 @@
 
 	&__item {
 		position: absolute;
+		z-index: 1;
 		// .parallax__item_1
 
 		&_1 {
+			left: 195px;
+    bottom: -22px;
 			width: 68px;
 			height: 68px;
-			border-width: 12px;
-			border-style: solid;
-			border-image: linear-gradient(to left, #5e0bc8, #00ffff) 0 0 0 70%;
-			left: 0;
-			bottom: 0;
-			border-radius: 50px;
+			background: url('@img/intro/ellipse.png') 0 0 no-repeat;
 		}
 
 		// .parallax__item_2
 
 		&_2 {
+			left: 219px;
+    	bottom: -26px;
+			width: 131px;
+			height: 131px;
+			background: url('@img/intro/polygon.png') 0 0 no-repeat;
 		}
 
 		// .parallax__item_3
 
 		&_3 {
+			left: 62%;
+			transform: translateX(-50%);
+    	bottom: -26px;
+			width: 413px;
+			height: 413px;
+			background: url('@img/intro/ellipse-big.png') 0 0 no-repeat;
+			z-index: -1;
 		}
 	}
 }

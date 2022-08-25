@@ -1,63 +1,4 @@
 // Заголовки, общие БЄМ блоки и проче...
-.line-vertcal {
-	// .line-vertcal__inner
-
-	&__inner {
-		position: relative;
-		height: 100vh;
-		span {
-			position: absolute;
-			top: 0;
-			height: 100%;
-			width: 1px;
-			background-color: rgba(255, 255, 255, 0.13);
-			&:nth-child(1) {
-				left: 0;
-			}
-			&:nth-child(2) {
-				left: 200px;
-			}
-			&:nth-child(3) {
-				left: 400px;
-			}
-			&:nth-child(4) {
-				left: 600px;
-			}
-			&:nth-child(5) {
-				left: 800px;
-			}
-			&:nth-child(6) {
-				left: 1000px;
-			}
-			&:nth-child(7) {
-				left: 1200px;
-			}
-		}
-	}
-}
-
-.social {
-	position: absolute;
-	left: -81px;
-	top: 50%;
-	transform: translateY(-50%);
-	display: flex;
-	flex-direction: column;
-	row-gap: 13px;
-
-	// .social__link
-
-	&__link {
-		display: block;
-		padding: 22px;
-		border-radius: 50px;
-		border: 1px solid #fff;
-	}
-}
-
-.magnetic {
-	transition: transform 0.1s linear;
-}
 
 [class*="__btn"] {
 	font-weight: 700;
@@ -81,4 +22,101 @@
 		z-index: -1;
 		border-radius: 50px;
 	}
+}
+
+/** Custom Select **/
+.custom-select-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	user-select: none;
+	padding-right: 52px;
+}
+.custom-select-wrapper select {
+	display: none;
+}
+.custom-select {
+	position: relative;
+	display: inline-block;
+}
+.custom-select-trigger {
+	position: relative;
+	display: block;
+	padding-left: 23px;
+	font-weight: 700;
+	font-size: rem(13);
+	line-height: math.div(16 , 13);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background: transparent;
+	cursor: pointer;
+}
+.custom-select-trigger:after {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 5px;
+	height: 5px;
+	top: 50%;
+	left: 0;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transform: rotate(45deg) translateY(-50%);
+	transition: all 0.4s ease-in-out;
+	transform-origin: 50% 0;
+}
+.custom-select.opened .custom-select-trigger:after {
+	transform: rotate(-135deg) translateY(-50%);
+}
+.custom-options {
+	position: absolute;
+	display: block;
+	top: 100%;
+	right: 0;
+	min-width: 100%;
+	margin: 15px 0;
+	border: 1px solid #b5b5b5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.07);
+	background: #272727;
+	transition: all 0.4s ease-in-out;
+
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(-15px);
+}
+.custom-select.opened .custom-options {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	transform: translateY(0);
+}
+.option-hover:before {
+	background: #303030;
+}
+.custom-option {
+	position: relative;
+	display: block;
+	padding: 0 22px;
+	border-bottom: 1px solid #646464;
+	font-size: 18px;
+	font-weight: 600;
+	color: #ffffff;
+	line-height: 47px;
+	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+}
+.custom-option:first-of-type {
+	border-radius: 4px 4px 0 0;
+}
+.custom-option:last-of-type {
+	border-bottom: 0;
+	border-radius: 0 0 4px 4px;
+}
+.custom-option:hover,
+.custom-option.selection {
+	background: #222222;
 }
